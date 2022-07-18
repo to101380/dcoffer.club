@@ -68,8 +68,8 @@ function Socialmedia(i) {
           <img
             alt="dcoffer"
             src={icon[i].icon}
-            width="35"
-            style={{ margin: "10px" }}
+            width="45"         
+            style={{ marginBottom: "13px", opacity: "0.5", transition: " 200ms" }}
           />
         </a>
       ) : (

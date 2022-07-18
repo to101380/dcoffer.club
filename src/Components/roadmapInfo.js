@@ -1,7 +1,7 @@
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import AOS from "aos";
 import { Container, Col } from "react-bootstrap";
@@ -31,9 +31,19 @@ const row_center = {
 };
 
 const icon = [
-  { icon: r1, name: "NFT", status: "more", url: "/Mine" },
-  { icon: r2, name: "MINE", status: "more", url: "https://www.facebook.com/" },
-  { icon: r3, name: "STAKE", status: "more", url: "https://www.facebook.com/" },
+  { icon: r1, name: "NFT", status: "more...", url: "/Mine" },
+  {
+    icon: r2,
+    name: "MINE",
+    status: "more...",
+    url: "https://www.facebook.com/",
+  },
+  {
+    icon: r3,
+    name: "STAKE",
+    status: "more...",
+    url: "https://www.facebook.com/",
+  },
   {
     icon: r4,
     name: "LOAN",
@@ -83,7 +93,7 @@ function operation(i) {
       data-aos="zoom-out"
       data-aos-duration="3000"
     >
-      <Link to={icon[i].url}>     
+      <Link to={icon[i].url}>
         <div style={column_center}>
           {Image(i)}
           <p>{icon[i].name}</p>
@@ -105,7 +115,7 @@ function Image(i) {
           src={icon[i].icon}
           width="80"
           className="d-inline-block align-center"
-          style={{ margin: "8px", opacity: "0.5" }}
+          style={{ margin: "8px", opacity: "0.5", transition: " 200ms" }}
         />
       ) : (
         <img
@@ -123,8 +133,8 @@ function Image(i) {
 function roadmap() {
   return (
     <ChakraProvider>
-      <Container style={{ marginBottom: "130px"}}>
-        <div className="cosCard" data-aos="fade-up" data-aos-duration="2000" >
+      <Container style={{ marginBottom: "130px" }}>
+        <div className="cosCard" data-aos="fade-up" data-aos-duration="2000">
           <Col md="12">
             <div style={row_center}>
               {operation(0)}
