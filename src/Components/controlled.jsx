@@ -2,7 +2,6 @@ import { useControllableState, Button, Box } from "@chakra-ui/react";
 
 function Example() {
   const [value, setValue] = useControllableState({ defaultValue: 1 });
-  
 
   return (
     <div>

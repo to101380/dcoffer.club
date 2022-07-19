@@ -41,7 +41,7 @@ function IntroCard() {
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>{item.description}</Card.Text>
         </Card.Body>
-        <Card.Img variant="top" src={item.img} />
+        <Card.Img variant="top" src={item.img} data-aos="zoom-out" data-aos-duration="2500"/>
       </Card>
     </Col>
   ));

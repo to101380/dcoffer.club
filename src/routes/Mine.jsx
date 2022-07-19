@@ -5,8 +5,7 @@ import "../App.css";
 import { ChakraProvider, Button, Tabs, TabList, Tab } from "@chakra-ui/react";
 import Controlled from "../Components/controlled";
 import { Container, Navbar, Row, Col } from "react-bootstrap";
-import { useState } from "react";
-// import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 import logo from "../img/DcofferLogoWord.png";
 import blindbox from "../img/blindbox.png";
@@ -25,14 +24,12 @@ const column_center = {
   flexDirection: "column",
 };
 
-// const row_center = {
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   flexDirection: "row",
-// };
-
-
+const row_center = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+};
 
 function navbar() {
   return (
@@ -61,8 +58,7 @@ function navbar() {
   );
 }
 
-function Mint() {
-  
+function mint() {
   return (
     <Container>
       <div
@@ -83,7 +79,7 @@ function Mint() {
           </Col>
           <Col md="6" style={column_center}>
             <h1 className="weber">DCOFF</h1>
-            <Controlled />            
+            <Controlled />
           </Col>
         </Row>
       </div>
@@ -96,7 +92,7 @@ function mine() {
     <ChakraProvider>
       {navbar()}
 
-      <section className="section_style_01">{Mint()}</section>
+      <section className="section_style_01">{mint()}</section>
       <Tabs size="md" variant="enclosed">
         <TabList>
           <Tab>One</Tab>
