@@ -12,6 +12,7 @@ import { ChakraProvider, Button, useBoolean } from "@chakra-ui/react";
 import MyNFT from "./img/myNFT.png";
 import logo from "./img/DcofferLogoWord.png";
 import Dcoff from "./img/myDcoff.png";
+import NFTGIF from "./img/NFTintro.gif";
 import FB from "./img/icon/Facebook.png";
 import DC from "./img/icon/Discord.png";
 import IG from "./img/icon/Instagram.png";
@@ -68,8 +69,12 @@ function Socialmedia(i) {
           <img
             alt="dcoffer"
             src={icon[i].icon}
-            width="45"         
-            style={{ marginBottom: "13px", opacity: "0.5", transition: " 200ms" }}
+            width="45"
+            style={{
+              marginBottom: "13px",
+              opacity: "0.5",
+              transition: " 200ms",
+            }}
           />
         </a>
       ) : (
@@ -88,15 +93,52 @@ function Socialmedia(i) {
 
 function DcoffInfo() {
   return (
-    <Container style={{ marginBottom: "30px" }}>
+    <Container style={{ margin: "30px" }}>
       <div className="cosCard" data-aos="fade-up" data-aos-duration="2000">
         <Row>
           <Col md="6" style={column_center}>
-            <img alt="dcoff" src={Dcoff} width="450" data-aos="fade-up" data-aos-duration="3000"/>
+            <img
+              alt="dcoff"
+              src={Dcoff}
+              width="450"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            />
           </Col>
           <Col md="6" style={column_center}>
-            <h1 className="weber">DCOFF</h1>
+            <h1 className="weber">DCOFF (DCF)</h1>
             <p>sdsefsefsefjoiejf</p>
+          </Col>
+        </Row>
+      </div>
+    </Container>
+  );
+}
+
+function NFTInfo() {
+  return (
+    <Container style={{ margin: "30px" }}>
+      <div className="cosCard" data-aos="fade-up" data-aos-duration="2000">
+        <Row>
+          <Col md="6" style={column_center}>
+            <div style={{padding:"12%"}}>
+              <h1 className="weber" style={{ color: "black",marginBottom: "30px" }}>
+                DCOFFER MINER
+              </h1>
+              <p>
+                Each Bored Ape is unique and programmatically generated from
+                over 170 possible traits, including expression, headwear,
+                clothing, and more. All apes are dope, but some are rarer than
+                others. The apes are stored as ERC-721 tokens on the Ethereum
+                blockchain and hosted on IPFS. (See Record and Proof.)
+                Purchasing an ape costs 0.08 ETH. To access members-only areas
+                such as THE BATHROOM, Apeholders will need to be signed into
+                their Metamask Wallet.
+              </p>
+            </div>
+          </Col>
+          <Col md="6" style={column_center}>
+            <img alt="decoffer" src={NFTGIF} width="450" />
           </Col>
         </Row>
       </div>
@@ -161,6 +203,7 @@ function App() {
               </Col>
             </Row>
           </Container>
+          <section className="section_style_03">{NFTInfo()}</section>
           <section style={column_center}>
             {DcoffInfo()}
             <Container style={{ margin: "10px 0px 130px 0px" }}>
